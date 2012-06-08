@@ -1,0 +1,1897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>483</width>
+    <height>521</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>483</width>
+    <height>521</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>483</width>
+    <height>521</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>SAR图像道路提取系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../RoadExtraction-build-desktop-Qt_4_8_0_for_Desktop_-_MSVC2010__Qt_SDK____/image/RoadExtraction.ico</normaloff>../RoadExtraction-build-desktop-Qt_4_8_0_for_Desktop_-_MSVC2010__Qt_SDK____/image/RoadExtraction.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>461</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <property name="usesScrollButtons">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tab_settings">
+     <attribute name="title">
+      <string>路径设置</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_sysPath">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>431</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>系统路径设置:</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>411</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label_inputPath">
+            <property name="text">
+             <string>  输入图像:  </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_inputPath"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_inputPath">
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_workDir">
+            <property name="text">
+             <string>系统工作目录:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_workDir"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_workDir">
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label__outputDir">
+            <property name="text">
+             <string>输出图像目录:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_outputDir"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_outputDir">
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_subPath">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>431</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>子程序路径设置</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>411</width>
+         <height>231</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label_subPath1">
+            <property name="text">
+             <string>步骤1.图像读入: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_subPath1"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_subPath1">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <widget class="QLabel" name="label_subPath2">
+            <property name="text">
+             <string>步骤2.分块切割: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_subPath2"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_subPath2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_subPath3">
+            <property name="text">
+             <string>步骤3.边缘提取: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_subPath3"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_subPath3">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_subPath4">
+            <property name="text">
+             <string>步骤4.Hough变换:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_subPath4"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_subPath4">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_subPath5">
+            <property name="text">
+             <string>步骤5.道路拟合: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_subPath5"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_subPath5">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QLabel" name="label_subPath6">
+            <property name="text">
+             <string>步骤6.分块合并: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_subPath6"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_subPath6">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <item>
+           <widget class="QLabel" name="label_subPath7">
+            <property name="text">
+             <string>步骤7.标注原图: </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="lineEdit_subPath7"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_subPath7">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>35</width>
+              <height>23</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton_loadSettings">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>430</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>加载配置</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_saveSettings">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>430</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>保存当前配置</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_resetAll">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>430</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>全部重置</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_settingsOp">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>432</y>
+        <width>81</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>路径配置操作:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_queue">
+     <attribute name="title">
+      <string>处理队列</string>
+     </attribute>
+     <widget class="QScrollArea" name="scrollArea_queue">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>441</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>422</width>
+         <height>629</height>
+        </rect>
+       </property>
+       <widget class="QGroupBox" name="groupBox_step1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>401</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>步骤1.图像读入</string>
+        </property>
+        <widget class="QProgressBar" name="progressBar_step1">
+         <property name="geometry">
+          <rect>
+           <x>47</x>
+           <y>20</y>
+           <width>181</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_paramStep1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>54</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>参数命令:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_paramStep1">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>50</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_priorityStep1">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>21</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>进程优先级:</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_priorityStep1">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>20</y>
+           <width>69</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>高</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>高于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton_step1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>image/on.ico</normaloff>
+           <normalon>image/off.ico</normalon>image/on.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_viewStep1">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>50</y>
+           <width>61</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>查看结果</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_step2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>401</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>步骤2.分块切割</string>
+        </property>
+        <widget class="QLabel" name="label_paramStep2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>54</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>参数命令:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_priorityStep2">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>进程优先级:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_step2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>image/on.ico</normaloff>
+           <normalon>image/off.ico</normalon>image/on.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_step2">
+         <property name="geometry">
+          <rect>
+           <x>47</x>
+           <y>19</y>
+           <width>181</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_paramStep2">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>49</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_priorityStep2">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>19</y>
+           <width>69</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>高</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>高于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton_viewStep2">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>50</y>
+           <width>61</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>查看结果</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_step3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>401</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>步骤3.边缘提取</string>
+        </property>
+        <widget class="QLabel" name="label_paramStep3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>54</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>参数命令:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_priorityStep3">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>21</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>进程优先级:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_step3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>image/on.ico</normaloff>
+           <normalon>image/off.ico</normalon>image/on.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_step3">
+         <property name="geometry">
+          <rect>
+           <x>47</x>
+           <y>20</y>
+           <width>181</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_paramStep3">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>50</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_priorityStep3">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>20</y>
+           <width>69</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>高</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>高于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton_viewStep3">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>50</y>
+           <width>61</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>查看结果</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_step4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>280</y>
+          <width>401</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>步骤4.Hough变换</string>
+        </property>
+        <widget class="QLabel" name="label_paramStep4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>51</y>
+           <width>54</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>参数命令:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_priorityStep4">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>进程优先级:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_step4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>image/on.ico</normaloff>
+           <normalon>image/off.ico</normalon>image/on.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_step4">
+         <property name="geometry">
+          <rect>
+           <x>47</x>
+           <y>20</y>
+           <width>181</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_paramStep4">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>50</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_priorityStep4">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>20</y>
+           <width>69</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>高</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>高于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton_viewStep4">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>50</y>
+           <width>61</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>查看结果</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_step5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>370</y>
+          <width>401</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>步骤5.道路拟合</string>
+        </property>
+        <widget class="QLabel" name="label_paramStep5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>51</y>
+           <width>54</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>参数命令:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_priorityStep5">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>进程优先级:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_step5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>image/on.ico</normaloff>
+           <normalon>image/off.ico</normalon>image/on.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_step5">
+         <property name="geometry">
+          <rect>
+           <x>47</x>
+           <y>20</y>
+           <width>181</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_paramStep5">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>50</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_priorityStep5">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>20</y>
+           <width>69</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>高</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>高于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton_viewStep5">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>50</y>
+           <width>61</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>查看结果</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_step6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>460</y>
+          <width>401</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>步骤6.分块合并</string>
+        </property>
+        <widget class="QLabel" name="label_paramStep6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>54</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>参数命令:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_priorityStep6">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>21</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>进程优先级:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_step6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>image/on.ico</normaloff>
+           <normalon>image/off.ico</normalon>image/on.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_step6">
+         <property name="geometry">
+          <rect>
+           <x>47</x>
+           <y>20</y>
+           <width>181</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_paramStep6">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>50</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_priorityStep6">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>20</y>
+           <width>69</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>高</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>高于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton_viewStep6">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>50</y>
+           <width>61</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>查看结果</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_step7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>550</y>
+          <width>401</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="title">
+         <string>步骤7.标注原图</string>
+        </property>
+        <widget class="QLabel" name="label_paramStep7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>54</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>参数命令:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_priorityStep7">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>20</y>
+           <width>71</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>进程优先级:</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButton_step7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>31</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>image/on.ico</normaloff>
+           <normalon>image/off.ico</normalon>image/on.ico</iconset>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="progressBar_step7">
+         <property name="geometry">
+          <rect>
+           <x>47</x>
+           <y>19</y>
+           <width>181</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_paramStep7">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>49</y>
+           <width>251</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBox_priorityStep7">
+         <property name="geometry">
+          <rect>
+           <x>320</x>
+           <y>19</y>
+           <width>69</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>高</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>高于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低于标准</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>低</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButton_viewStep7">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>50</y>
+           <width>61</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>查看结果</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_progessAll">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>402</y>
+        <width>54</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>总体进度:</string>
+      </property>
+     </widget>
+     <widget class="QProgressBar" name="progressBar_all">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>400</y>
+        <width>381</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+      <property name="format">
+       <string>%p%</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_queueOp">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>431</y>
+        <width>54</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>队列操作:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_queueStart">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>430</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>开始</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_queueStop">
+      <property name="geometry">
+       <rect>
+        <x>384</x>
+        <y>430</y>
+        <width>61</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>停止</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_maxProcessNum">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>431</y>
+        <width>101</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>最大并行进程数:</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_maxProcessNum">
+      <property name="geometry">
+       <rect>
+        <x>120</x>
+        <y>430</y>
+        <width>41</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_queueInit">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>430</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>初始化</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_logs">
+     <attribute name="title">
+      <string>运行日志</string>
+     </attribute>
+     <widget class="QTreeWidget" name="treeWidget_logs">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>431</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="indentation">
+       <number>10</number>
+      </property>
+      <attribute name="headerVisible">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="headerStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>2012.05.04</string>
+       </property>
+      </column>
+      <item>
+       <property name="text">
+        <string>运行环境</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>当前程序版本</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>运行目录</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>操作系统</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>可用内存</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>显示器分辨率</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>路径配置</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>输入图像路径</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>工作目录</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>输出目录</string>
+        </property>
+       </item>
+      </item>
+      <item>
+       <property name="text">
+        <string>队列处理</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>队列1:</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>队列2:</string>
+        </property>
+       </item>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_logsOp">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>432</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>日志操作:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_saveLogs">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>430</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>保存日志</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>483</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_file">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_loadCfg"/>
+    <addaction name="action_saveCfg"/>
+    <addaction name="separator"/>
+    <addaction name="action_quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_view">
+    <property name="title">
+     <string>查看(&amp;V)</string>
+    </property>
+    <widget class="QMenu" name="menu_openDir">
+     <property name="title">
+      <string>打开目录</string>
+     </property>
+     <addaction name="action_workDir"/>
+     <addaction name="action_outputDir"/>
+    </widget>
+    <addaction name="action_inputImage"/>
+    <addaction name="separator"/>
+    <addaction name="menu_openDir"/>
+    <addaction name="separator"/>
+    <addaction name="action_queue"/>
+    <addaction name="action_logs"/>
+   </widget>
+   <widget class="QMenu" name="menu_tool">
+    <property name="title">
+     <string>工具(&amp;T)</string>
+    </property>
+    <addaction name="action_imgView"/>
+   </widget>
+   <widget class="QMenu" name="menu_option">
+    <property name="title">
+     <string>选项(&amp;O)</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>界面语言</string>
+     </property>
+     <addaction name="action_langCfg"/>
+    </widget>
+    <addaction name="action_netCfg"/>
+    <addaction name="menu"/>
+   </widget>
+   <widget class="QMenu" name="menu_help">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="action_onlineHelp"/>
+   </widget>
+   <addaction name="menu_file"/>
+   <addaction name="menu_view"/>
+   <addaction name="menu_tool"/>
+   <addaction name="menu_option"/>
+   <addaction name="menu_help"/>
+  </widget>
+  <action name="action_loadCfg">
+   <property name="text">
+    <string>加载路径配置</string>
+   </property>
+  </action>
+  <action name="action_saveCfg">
+   <property name="text">
+    <string>保存路径配置</string>
+   </property>
+  </action>
+  <action name="action_quit">
+   <property name="text">
+    <string>退出(&amp;Q)</string>
+   </property>
+  </action>
+  <action name="action_inputImage">
+   <property name="text">
+    <string>输入图像</string>
+   </property>
+  </action>
+  <action name="action_workDir">
+   <property name="text">
+    <string>系统工作目录</string>
+   </property>
+  </action>
+  <action name="action_outputDir">
+   <property name="text">
+    <string>输出图像目录</string>
+   </property>
+  </action>
+  <action name="action_queue">
+   <property name="text">
+    <string>队列进度</string>
+   </property>
+  </action>
+  <action name="action_logs">
+   <property name="text">
+    <string>日志信息</string>
+   </property>
+  </action>
+  <action name="action_imgView">
+   <property name="text">
+    <string>图片查看器</string>
+   </property>
+  </action>
+  <action name="action_netCfg">
+   <property name="text">
+    <string>网络配置</string>
+   </property>
+  </action>
+  <action name="action_langCfg">
+   <property name="text">
+    <string>简体中文(Chinese simplified)</string>
+   </property>
+  </action>
+  <action name="action_onlineHelp">
+   <property name="text">
+    <string>在线帮助</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>lineEdit_inputPath</tabstop>
+  <tabstop>pushButton_inputPath</tabstop>
+  <tabstop>lineEdit_workDir</tabstop>
+  <tabstop>pushButton_workDir</tabstop>
+  <tabstop>lineEdit_outputDir</tabstop>
+  <tabstop>pushButton_outputDir</tabstop>
+  <tabstop>lineEdit_subPath1</tabstop>
+  <tabstop>pushButton_subPath1</tabstop>
+  <tabstop>lineEdit_subPath2</tabstop>
+  <tabstop>pushButton_subPath2</tabstop>
+  <tabstop>lineEdit_subPath3</tabstop>
+  <tabstop>pushButton_subPath3</tabstop>
+  <tabstop>lineEdit_subPath4</tabstop>
+  <tabstop>pushButton_subPath4</tabstop>
+  <tabstop>lineEdit_subPath5</tabstop>
+  <tabstop>pushButton_subPath5</tabstop>
+  <tabstop>lineEdit_subPath6</tabstop>
+  <tabstop>pushButton_subPath6</tabstop>
+  <tabstop>lineEdit_subPath7</tabstop>
+  <tabstop>pushButton_subPath7</tabstop>
+  <tabstop>pushButton_resetAll</tabstop>
+  <tabstop>pushButton_loadSettings</tabstop>
+  <tabstop>pushButton_saveSettings</tabstop>
+  <tabstop>scrollArea_queue</tabstop>
+  <tabstop>lineEdit_paramStep1</tabstop>
+  <tabstop>comboBox_priorityStep1</tabstop>
+  <tabstop>pushButton_step1</tabstop>
+  <tabstop>pushButton_viewStep1</tabstop>
+  <tabstop>pushButton_step2</tabstop>
+  <tabstop>lineEdit_paramStep2</tabstop>
+  <tabstop>comboBox_priorityStep2</tabstop>
+  <tabstop>pushButton_viewStep2</tabstop>
+  <tabstop>pushButton_step3</tabstop>
+  <tabstop>lineEdit_paramStep3</tabstop>
+  <tabstop>comboBox_priorityStep3</tabstop>
+  <tabstop>pushButton_viewStep3</tabstop>
+  <tabstop>pushButton_step4</tabstop>
+  <tabstop>lineEdit_paramStep4</tabstop>
+  <tabstop>comboBox_priorityStep4</tabstop>
+  <tabstop>pushButton_viewStep4</tabstop>
+  <tabstop>pushButton_step5</tabstop>
+  <tabstop>lineEdit_paramStep5</tabstop>
+  <tabstop>comboBox_priorityStep5</tabstop>
+  <tabstop>pushButton_viewStep5</tabstop>
+  <tabstop>pushButton_step6</tabstop>
+  <tabstop>lineEdit_paramStep6</tabstop>
+  <tabstop>comboBox_priorityStep6</tabstop>
+  <tabstop>pushButton_viewStep6</tabstop>
+  <tabstop>pushButton_step7</tabstop>
+  <tabstop>lineEdit_paramStep7</tabstop>
+  <tabstop>comboBox_priorityStep7</tabstop>
+  <tabstop>pushButton_viewStep7</tabstop>
+  <tabstop>pushButton_queueStart</tabstop>
+  <tabstop>pushButton_queueStop</tabstop>
+  <tabstop>spinBox_maxProcessNum</tabstop>
+  <tabstop>pushButton_queueInit</tabstop>
+  <tabstop>treeWidget_logs</tabstop>
+  <tabstop>pushButton_saveLogs</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

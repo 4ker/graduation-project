@@ -1,0 +1,19 @@
+步骤1: ImageReader <input file path> [output file path]
+步骤2: ImageCutter <input file path> [out dir]
+步骤3: edgeDetector <readImgFile> <saveEdgeFile> <saveDireFile> [other]
+步骤4: houghTrans <readEdgeFile> <readDireFile> <saveLineFile> [other]
+步骤5: roadSkel <readLineFile> <saveSkelFile> [other]
+步骤6: ImageCombiner <input config file path> [output file path]
+步骤7: outResult <readAnsFile> <readOrigFile> <saveResFile>
+
+各步骤输出文件标示:
+
+ 步骤    功能    标示       header大小(字节)
+
+步骤1: 读取图像  ImgB  		4
+步骤2: 小块切割  ImgC		40
+步骤3: 边缘提取  ImgE ImgD	40
+步骤4: Hough变换 ImgL		40
+步骤5: 骨架提取  ImgS		40
+步骤6: 小块合并  ImgA		4
+步骤7: 输出结果  无		无	
